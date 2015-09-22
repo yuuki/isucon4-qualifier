@@ -20,4 +20,6 @@ export ISU4_DB_USER=isucon
 export ISU4_DB_PASSWORD=isucon
 export ISU4_DB_NAME=isu4_qualifier
 
+export PERL_CARTON_PATH=/home/isucon/deploy/local
+export PERL_CARTON_CPANFILE=/home/isucon/deploy/cpanfile
 exec $*
