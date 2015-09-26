@@ -14,3 +14,5 @@ sudo supervisorctl reread
 sudo supervisorctl update
 sudo supervisorctl restart isucon_perl
 /home/isucon/benchmarker bench --workload $WORKLOAD_NUM
+
+sudo supervisorctl stop isucon_perl # for nytprof
