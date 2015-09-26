@@ -26,9 +26,9 @@ builder {
     my $app = shift;
       sub {
         my $env = shift;
-        DB::enable_profile() if $$ % 10 = 0; 
+        DB::enable_profile() if $$ % 10 == 0; 
         my $res = $app->($env);
-        DB::disable_profile();
+        DB::disable_profile() if $$ % 10 == 0; 
         return $res;
       };
     };
