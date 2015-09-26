@@ -1636,6 +1636,30 @@ DISTRIBUTIONS
       parent 0
       perl 5.008001
       utf8 0
+  URL-Encode-0.03
+    pathname: C/CH/CHANSEN/URL-Encode-0.03.tar.gz
+    provides:
+      URL::Encode 0.03
+      URL::Encode::PP 0.03
+    requirements:
+      Carp 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.59
+      Test::More 0.88
+      XSLoader 0
+      perl 5.008001
+  URL-Encode-XS-0.03
+    pathname: C/CH/CHANSEN/URL-Encode-XS-0.03.tar.gz
+    provides:
+      URL::Encode::XS 0.03
+    requirements:
+      Carp 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.59
+      Test::More 0.88
+      URL::Encode 0.03
+      XSLoader 0
+      perl 5.008001
   WWW-Form-UrlEncoded-0.19
     pathname: K/KA/KAZEBURO/WWW-Form-UrlEncoded-0.19.tar.gz
     provides:
