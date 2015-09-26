@@ -20,6 +20,7 @@ builder {
   enable 'Profiler::NYTProf',
     env_nytprof          => 'start=no:sigexit=int:addpid=0:forkdepth=0:file=/tmp/nytprof.out',
     profiling_result_dir => sub { '/tmp' },
+    enable_profile       => sub { $$ % 10 == 0 },
     enable_reporting     => 0
   ;
   enable 'ReverseProxy';
