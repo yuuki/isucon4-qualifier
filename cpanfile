@@ -10,6 +10,7 @@ requires "Starman";
 requires "Gazelle";
 requires "Plack::Session";
 requires "Plack::Middleware::Session::Simple";
+requires "Sereal";
 requires "Cache::Memcached::Fast";
 requires "Data::Dumper";
 requires "Devel::NYTProf"
