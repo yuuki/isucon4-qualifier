@@ -15,4 +15,5 @@ CREATE TABLE IF NOT EXISTS `login_log` (
 
   KEY (`ip`, `succeeded`),
   KEY (`ip`, `user_id`)
+  KEY (`user_id`)
 ) DEFAULT CHARSET=utf8;
