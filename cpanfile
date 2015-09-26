@@ -13,5 +13,5 @@ requires "Plack::Middleware::Session::Simple";
 requires "Sereal";
 requires "Cache::Memcached::Fast";
 requires "Data::Dumper";
-requires "Devel::NYTProf";
+requires "Plack::Middleware::Profiler::NYTProf";
 requires "URL::Encode::XS";
