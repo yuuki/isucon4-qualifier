@@ -9,7 +9,7 @@ use Plack::Session::Store::File;
 use Sereal;
 use Cache::Memcached::Fast;
 
-my @nytprof_opts = qw(addpid=1 start=no sigexit=1 file=/tmp/nytprof.out);
+my @nytprof_opts = qw(addpid=1 start=no sigexit=1 blocks=1 file=/tmp/nytprof.out);
 $ENV{"NYTPROF"} = join ":", @nytprof_opts;
 
 require Devel::NYTProf;
@@ -26,7 +26,7 @@ builder {
     my $app = shift;
       sub {
         my $env = shift;
-        DB::enable_profile("/tmp/nytprof.out." . $i++) if $$ % 100 = 0; 
+        DB::enable_profile() if $$ % 10 = 0; 
         my $res = $app->($env);
         DB::disable_profile();
         return $res;
