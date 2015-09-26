@@ -14,6 +14,6 @@ CREATE TABLE IF NOT EXISTS `login_log` (
   `succeeded` tinyint NOT NULL,
 
   KEY (`ip`, `succeeded`),
-  KEY (`ip`, `user_id`)
+  KEY (`ip`, `user_id`),
   KEY (`user_id`)
 ) DEFAULT CHARSET=utf8;
