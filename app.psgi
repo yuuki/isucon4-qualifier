@@ -9,7 +9,7 @@ use Plack::Session::Store::File;
 use Sereal;
 use Cache::Memcached::Fast;
 
-my @nytprof_opts = qw(addpid=1 start=no sigexit=1 trace=10
+my @nytprof_opts = qw(addpid=1 start=no sigexit=1 stmts=1 findcaller=1
                forkdepth=0 file=/tmp/nytprof.out);
 $ENV{"NYTPROF"} = join ":", @nytprof_opts;
 
