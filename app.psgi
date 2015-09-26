@@ -24,7 +24,7 @@ builder {
     root => $root_dir . '/public';
   enable 'Session::Simple',
     store => Cache::Memcached::Fast->new({
-       servers => [ { address => "localhost:11211",noreply=>0} ],
+       servers => [ { address => "/tmp/memcached.sock", noreply => 0 } ],
        serialize_methods => [ sub { $encoder->encode($_[0])}, 
                               sub { $decoder->decode($_[0])} ],
     }),
