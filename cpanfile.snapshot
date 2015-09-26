@@ -451,6 +451,54 @@ DISTRIBUTIONS
       File::Spec 0
       strict 0
       warnings 0
+  ExtUtils-MakeMaker-7.10
+    pathname: B/BI/BINGOS/ExtUtils-MakeMaker-7.10.tar.gz
+    provides:
+      DynaLoader 7.10
+      ExtUtils::Command 7.10
+      ExtUtils::Command::MM 7.10
+      ExtUtils::Liblist 7.10
+      ExtUtils::Liblist::Kid 7.10
+      ExtUtils::MM 7.10
+      ExtUtils::MM_AIX 7.10
+      ExtUtils::MM_Any 7.10
+      ExtUtils::MM_BeOS 7.10
+      ExtUtils::MM_Cygwin 7.10
+      ExtUtils::MM_DOS 7.10
+      ExtUtils::MM_Darwin 7.10
+      ExtUtils::MM_MacOS 7.10
+      ExtUtils::MM_NW5 7.10
+      ExtUtils::MM_OS2 7.10
+      ExtUtils::MM_QNX 7.10
+      ExtUtils::MM_UWIN 7.10
+      ExtUtils::MM_Unix 7.10
+      ExtUtils::MM_VMS 7.10
+      ExtUtils::MM_VOS 7.10
+      ExtUtils::MM_Win32 7.10
+      ExtUtils::MM_Win95 7.10
+      ExtUtils::MY 7.10
+      ExtUtils::MakeMaker 7.10
+      ExtUtils::MakeMaker::Config 7.10
+      ExtUtils::MakeMaker::Locale 7.10
+      ExtUtils::MakeMaker::_version 7.10
+      ExtUtils::MakeMaker::charstar 7.10
+      ExtUtils::MakeMaker::version 7.10
+      ExtUtils::MakeMaker::version::regex 7.10
+      ExtUtils::MakeMaker::version::vpp 7.10
+      ExtUtils::Mkbootstrap 7.10
+      ExtUtils::Mksymlists 7.10
+      ExtUtils::testlib 7.10
+      MM 7.10
+      MY 7.10
+      in 7.10
+    requirements:
+      Data::Dumper 0
+      DirHandle 0
+      Encode 0
+      File::Basename 0
+      File::Spec 0.8
+      Pod::Man 0
+      perl 5.006
   ExtUtils-ParseXS-3.30
     pathname: S/SM/SMUELLER/ExtUtils-ParseXS-3.30.tar.gz
     provides:
@@ -1185,6 +1233,40 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test::More 0
       perl 5.006001
+  Sereal-3.005
+    pathname: Y/YV/YVES/Sereal-3.005.tar.gz
+    provides:
+      Sereal 3.005
+    requirements:
+      ExtUtils::MakeMaker 0
+      Sereal::Decoder 3.005
+      Sereal::Encoder 3.005
+      perl 5.008
+  Sereal-Decoder-3.005
+    pathname: Y/YV/YVES/Sereal-Decoder-3.005.tar.gz
+    provides:
+      Sereal::Decoder 3.005
+      Sereal::Decoder::Constants undef
+      Sereal::Performance undef
+    requirements:
+      ExtUtils::MakeMaker 7.0
+      ExtUtils::ParseXS 2.21
+      File::Find 0
+      File::Path 0
+      XSLoader 0
+      perl 5.008
+  Sereal-Encoder-3.005
+    pathname: Y/YV/YVES/Sereal-Encoder-3.005.tar.gz
+    provides:
+      Sereal::Encoder 3.005
+      Sereal::Encoder::Constants undef
+    requirements:
+      ExtUtils::MakeMaker 7.0
+      ExtUtils::ParseXS 2.21
+      File::Find 0
+      File::Path 0
+      XSLoader 0
+      perl 5.008
   Server-Starter-0.32
     pathname: K/KA/KAZUHO/Server-Starter-0.32.tar.gz
     provides:
