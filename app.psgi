@@ -13,6 +13,8 @@ my @nytprof_opts = qw(addpid=1 start=no sigexit=1
                forkdepth=0 file=/tmp/nytprof.out);
 $ENV{"NYTPROF"} = join ":", @nytprof_opts;
 
+use Devel::NYTProf;
+
 my $root_dir = File::Basename::dirname(__FILE__);
 my $session_dir = "/tmp/isu4_session_plack";
 mkdir $session_dir;
