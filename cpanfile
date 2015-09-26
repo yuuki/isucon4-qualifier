@@ -14,3 +14,4 @@ requires "Sereal";
 requires "Cache::Memcached::Fast";
 requires "Data::Dumper";
 requires "Devel::NYTProf"
+requires "URL::Encode::XS";
