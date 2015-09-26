@@ -6,6 +6,7 @@ use Plack::Builder;
 use Isu4Qualifier::Web;
 use Plack::Session::State::Cookie;
 use Plack::Session::Store::File;
+use Cache::Memcached::Fast;
 #use Devel::NYTProf;
 
 my $root_dir = File::Basename::dirname(__FILE__);
@@ -18,14 +19,15 @@ builder {
   enable 'Static',
     path => qr!^/(?:stylesheets|images)/!,
     root => $root_dir . '/public';
-  enable 'Session',
-    state => Plack::Session::State::Cookie->new(
-      httponly    => 1,
-      session_key => "isu4_session",
-    ),
-    store => Plack::Session::Store::File->new(
-      dir         => $session_dir,
-    ),
+  enable 'Session::Simple',
+    store => Cache::Memcached::Fast->new({
+       servers => [ { address => "localhost:11211",noreply=>0} ],
+       serialize_methods => [ sub { $encoder->encode($_[0])}, 
+                              sub { $decoder->decode($_[0])} ],
+    }),
+    httponly => 1,
+    cookie_name => "isu4_session",
+    keep_empty => 0;
   ;
   # enable sub {
   #   my $app = shift;

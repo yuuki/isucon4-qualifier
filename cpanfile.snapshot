@@ -56,6 +56,13 @@ DISTRIBUTIONS
       perl 5.008001
       strict 0
       warnings 0
+  Cache-Memcached-Fast-0.23
+    pathname: K/KR/KROKI/Cache-Memcached-Fast-0.23.tar.gz
+    provides:
+      Cache::Memcached::Fast 0.23
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
   Capture-Tiny-0.30
     pathname: D/DA/DAGOLDEN/Capture-Tiny-0.30.tar.gz
     provides:
@@ -1135,6 +1142,22 @@ DISTRIBUTIONS
       Digest::SHA1 0
       Module::Build::Tiny 0.037
       Plack 0.9910
+  Plack-Middleware-Session-Simple-0.03
+    pathname: K/KA/KAZEBURO/Plack-Middleware-Session-Simple-0.03.tar.gz
+    provides:
+      Plack::Middleware::Session::Simple 0.03
+    requirements:
+      CPAN::Meta 0
+      CPAN::Meta::Prereqs 0
+      Cookie::Baker 0.02
+      Digest::SHA1 2.13
+      ExtUtils::CBuilder 0
+      Module::Build 0.38
+      Plack 1.0029
+      Scalar::Util 0
+      Tie::Hash 0
+      parent 0.223
+      perl 5.008005
   Proc-Wait3-0.04
     pathname: C/CT/CTILMES/Proc-Wait3-0.04.tar.gz
     provides:

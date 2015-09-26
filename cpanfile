@@ -9,5 +9,7 @@ requires "DBD::mysql";
 requires "Starman";
 requires "Gazelle";
 requires "Plack::Session";
+requires "Plack::Middleware::Session::Simple";
+requires "Cache::Memcached::Fast";
 requires "Data::Dumper";
 requires "Devel::NYTProf"
