@@ -6,6 +6,7 @@ use Plack::Builder;
 use Isu4Qualifier::Web;
 use Plack::Session::State::Cookie;
 use Plack::Session::Store::File;
+use Sereal;
 use Cache::Memcached::Fast;
 #use Devel::NYTProf;
 
@@ -13,6 +14,8 @@ my $root_dir = File::Basename::dirname(__FILE__);
 my $session_dir = "/tmp/isu4_session_plack";
 mkdir $session_dir;
 
+my $decoder = Sereal::Decoder->new();
+my $encoder = Sereal::Encoder->new();
 my $app = Isu4Qualifier::Web->psgi($root_dir);
 builder {
   enable 'ReverseProxy';
