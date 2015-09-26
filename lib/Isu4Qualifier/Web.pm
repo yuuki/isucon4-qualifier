@@ -26,7 +26,7 @@ sub db {
 
   $self->{_db} ||= do {
     DBIx::Sunny->connect(
-      "dbi:mysql:database=$database;mysql_socket=/var/run/mysql/mysqld.sock", $username, $password, {
+      "dbi:mysql:database=$database;mysql_socket=/var/run/mysqld/mysqld.sock", $username, $password, {
         RaiseError => 1,
         PrintError => 0,
         AutoInactiveDestroy => 1,
