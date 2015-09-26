@@ -191,8 +191,6 @@ post '/login' => sub {
   my ($self, $c) = @_;
   my $msg;
 
-  DB::enable_profile();
-
   my ($user, $err) = $self->attempt_login(
     $c->req->param('login'),
     $c->req->param('password'),
@@ -215,8 +213,6 @@ post '/login' => sub {
     }
     $c->redirect('/');
   }
-
-  DB::disable_profile();
 };
 
 get '/mypage' => [qw(session)] => sub {
