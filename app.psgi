@@ -26,6 +26,7 @@ builder {
     store => Plack::Session::Store::File->new(
       dir         => $session_dir,
     ),
+  ;
   # enable sub {
   #   my $app = shift;
   #     sub {
