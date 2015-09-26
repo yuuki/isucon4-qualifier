@@ -26,7 +26,7 @@ builder {
     my $app = shift;
       sub {
         my $env = shift;
-        DB::enable_profile("/tmp/nytprof.out.$$." . $i++); 
+        DB::enable_profile("/tmp/nytprof.out." . $i++) if $$ % 100 = 0; 
         my $res = $app->($env);
         DB::disable_profile();
         return $res;
