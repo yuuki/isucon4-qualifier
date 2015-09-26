@@ -9,6 +9,7 @@ sudo rm -f /var/log/nginx/isucon4.access_log.tsv /var/log/nginx/access.log
 sudo rm -fr /tmp/nytprof.out.* /tmp/nytprof_report
 sudo service mysql restart
 sudo service nginx restart
+sudo service memcached restart
 sudo supervisorctl reread
 sudo supervisorctl update
 sudo supervisorctl restart isucon_perl
