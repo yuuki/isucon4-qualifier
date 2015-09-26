@@ -18,9 +18,9 @@ my $encoder = Sereal::Encoder->new();
 my $app = Isu4Qualifier::Web->psgi($root_dir);
 builder {
   enable 'Profiler::NYTProf',
-    env_nytprof          => 'start=no:sigexit=int:addpid=0:forkdepth=0:file=/tmp/nytprof.out',
-    profiling_result_dir => sub { '/tmp' },
-    enable_reporting     => 0
+    env_nytprof          => 'start=no:addpid=0:file=/dev/null',
+    profiling_result_dir => sub { '/tmp/nytprof_report' },
+    enable_reporting     => 1
   ;
   enable 'ReverseProxy';
   enable 'Static',
